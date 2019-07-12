@@ -4,48 +4,46 @@ proprietà.*/
 var studente = {
     "nome": "alessandro",
     "cognome": "rossi",
-    "età": 25
+    "età": "25"
 }
 
 for (var datistudente in studente) {
-    console.log(studente[datistudente]);
+    console.log(datistudente + " = " + studente[datistudente]);
 }
 
 /* Creare un array di oggetti di studenti.
 Ciclare su tutti gli studenti e stampare per ognuno nome e cognome*/
 var arrstudenti = [
-    marco = {
+    {
         "nome": "marco",
         "cognome": "frigerio",
+        "età": "22"
     },
 
-    davide = {
+    {
         "nome": "davide",
         "cognome": "poppa",
+        "età": "28"
     },
 
-    simone = {
+    {
         "nome": "simone",
         "cognome": "pica",
+        "età": "32"
     }
 ];
 
-for (var datistudenti in arrstudenti) {
-    console.log(arrstudenti[datistudenti]);
+for (var i = 0; i < arrstudenti.length; i++) {
+    console.log(arrstudenti[i].nome, arrstudenti[i].cognome, arrstudenti[i].età);
 }
-
 /*Dare la possibilità all’utente attraverso 3 prompt di
 aggiungere un nuovo oggetto studente inserendo nell’ordine:
 nome, cognome e età.*/
-
-listastudenti = [];
 
 var name = prompt("Inserisci il nome dello studente che vuoi aggiungere.");
 var surname = prompt("Inserisci il cognome dello studente che vuoi aggiungere.");
 var age = prompt("Inserisci l'èta dello studente che vuoi aggiungere.");
 
-listastudenti.nome = name;
-listastudenti.cognome = surname;
-listastudenti.età = age;
+arrstudenti.push({"nome": name,"cognome": surname, "età" : age});
 
-console.log(listastudenti);
+console.log("L'array studenti contiene = ", arrstudenti);
